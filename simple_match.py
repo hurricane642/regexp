@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+#!/usr/bin/env python3
 
 # Для каждого регулярного выражения, которое требуется написать,
 # указаны строки, соответствующие этому выражению (они отмечены знаком +),
@@ -8,27 +9,27 @@
 # + ab
 # - b
 # - ba
-REGEXP_1 = ''
+REGEXP_1 = '[a]'
 
 # + aab
 # + abb
 # + acb
 # - ab
 # - aabc
-REGEXP_2 = ''
+REGEXP_2 = '.{3}$'
 
 # + sofia.mp3
 # + sofia.mp4
 # - sofia.mp7
 # - sofia.mp34
-REGEXP_3 = ''
+REGEXP_3 = 'sofia.mp[3,4]$'
 
 # + taverna
 # + versus
 # + vera
 # + zveri
 # - zver
-REGEXP_4 = ''
+REGEXP_4 = '[a-z]*ver.'
 
 # - a
 # - aa
@@ -39,7 +40,7 @@ REGEXP_4 = ''
 # + bbb
 # - bbbb
 # - ccc
-REGEXP_5 = ''
+REGEXP_5 = '.{3}$'
 
 # - Ok
 # - OkOk
@@ -49,7 +50,7 @@ REGEXP_5 = ''
 # - abab
 # + ababab
 # - abababab
-REGEXP_6 = ''
+REGEXP_6 = '.{6}$'
 
 # - aaa
 # - aaa aaa
@@ -58,7 +59,7 @@ REGEXP_6 = ''
 # + Aaa aaa aaa
 # - A
 # - aaa A aaa
-REGEXP_7 = ''
+REGEXP_7 = '.{11}$'
 
 # + abc
 # + abc03
@@ -67,4 +68,5 @@ REGEXP_7 = ''
 # - Aabc
 # - abc1
 # - #abc
-REGEXP_8 = ''
+REGEXP_8 = 'abc$|abc03$|a-b-c-3$|a.b.c.0$'
+
